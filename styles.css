@@ -1,0 +1,793 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Rubik', serif;
+}
+
+header{
+    width: 90%;
+    margin: 2rem auto;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-nav-container{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width:100vw;
+    height: 100vh;
+    background: hsl(229, 31%, 21%);
+    opacity: 0.9;
+    color: #fff;
+    z-index: 100;
+    padding: 1.5rem;
+    padding-top: 2rem;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile{
+    display: none;
+}
+
+.mobile-nav-items{
+    list-style: none;
+    font-size: 1.3rem;
+    width: 90%;
+    padding: 0;
+    margin: auto;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.mobile-nav-container div:first-of-type{
+    display: flex;
+    justify-content: space-between;
+}
+
+.mobile-nav-items li{
+    border-bottom: 1px solid hsl(229, 8%, 60%);
+    padding: 1.5rem 0;
+    margin: 0;
+    letter-spacing: 3px;
+}
+
+.mobile-nav-items li:last-of-type{
+    border: 3px solid #fff;
+    padding: 1rem 0;
+    border-radius: 5px;
+}
+
+.mobile-socials{
+    display: block;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.mobile-socials i{
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-items{
+    display: none;
+}
+
+.intro-illustration-container{
+    position: relative;
+}
+
+.intro__illustration{
+    width: 80vw;
+    height: auto;
+    margin: auto;
+}
+
+.intro__illustration img{
+    width: 100%;
+    height: 100%;
+}
+
+.intro__text{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    color: hsl(229, 8%, 60%);
+}
+
+.intro__text p:first-child{
+    font-size: 2rem;
+    font-weight: 500;
+    color: hsl(229, 31%, 21%);
+}
+
+.intro__text p:last-of-type{
+    padding: 0 1rem;
+}
+
+.intro button{
+    width: 9.5rem;
+    height: 3rem;
+    margin: 1rem 0.5rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.intro button:first-of-type{
+    background: hsl(231, 69%, 60%);
+    color: #fff;
+}
+
+.intro button:last-of-type{
+    background: hsl(240, 17%, 98%);
+    box-shadow: 0 2px 5px hsl(225, 5%, 85%);
+    color: hsl(229, 31%, 21%);
+}
+
+.background-pill{
+    width: 75%;
+    height: 25vh;
+    background: hsl(231, 69%, 60%);
+    position: absolute;
+    z-index: -10;
+    top: 3rem;
+    right: 0;
+    border-radius: 50px 0 0 50px;
+
+}
+
+.features{  
+    margin: 10rem auto 5rem auto; 
+}
+
+.features-header{
+    width: 90vw;
+    text-align: center;
+    margin: auto;
+}
+.features-header > p:first-of-type{
+    color: hsl(229, 31%, 21%);
+    letter-spacing: 0.2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.features-header > p:last-of-type{
+    line-height: 1.4;
+    color:hsl(229, 8%, 60%);
+    padding: 0 0.5rem;
+}
+
+.carousel-box{
+    margin: 4rem 0;
+}
+
+.carousel-controller{
+    border-top: 1px solid hsl(225, 5%, 85%);
+    display: flex;
+    flex-direction: column;
+}
+
+
+.carousel-controller p{
+    color:hsl(229, 31%, 21%);
+    border-bottom: 1px solid hsl(225, 5%, 85%); 
+    padding: 0.5rem 0; 
+    vertical-align: center;
+}
+
+.carousel-controller p.selected{
+    border-bottom: 1.5px solid hsl(0, 94%, 66%);
+}
+
+.carousel-container{
+    width: 100%;
+    position: relative;
+}
+.carousel{
+    height: 100%;
+    overflow: hidden;
+}
+
+.slider{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300%;
+    transition: all .3s;
+}
+
+.illustration-container{
+    width: 90vw;
+    height: auto;
+    margin: auto;
+}
+
+.carousel__one,
+.carousel__two,
+.carousel__three{
+    flex-basis: 100%;
+    text-align: center;
+    display:flex;
+    flex-direction: column; 
+}
+
+.carousel__one div:nth-of-type(2),
+.carousel__two div:nth-of-type(2),
+.carousel__three div:nth-of-type(2){
+    margin: 7rem 0 1rem 0;
+}
+
+.carousel__one p,
+.carousel__two p,
+.carousel__three p{
+    color:hsl(229, 8%, 60%);
+    line-height: 1.4;
+}
+
+.carousel__one p:first-of-type,
+.carousel__two p:first-of-type,
+.carousel__three p:first-of-type{
+    color:hsl(229, 31%, 21%);
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.illustration-container img{
+    width: 100%;
+    height: 100%;
+}
+.carousel-text{
+    width: 90%;
+    margin: auto;
+}
+
+.carousel button{
+    display: none;
+}
+
+.background-pill-2{
+    width: 75%;
+    height: 25vh;
+    background: hsl(231, 69%, 60%);
+    position: absolute;
+    z-index: -10;
+    top: 8rem;
+    left: 0;
+    border-radius: 0 50px 50px 0;
+}
+
+.download-options{
+    width: 90vw;
+    margin: auto;
+    text-align: center;
+}
+
+.download-options p{
+    color:hsl(229, 8%, 60%);
+
+}
+
+.download-options p:first-child{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color:hsl(229, 31%, 21%);
+}
+
+.browser{
+    width: 90%;
+    height: auto;
+    margin: 2rem auto;
+    box-shadow: 4px 4px 6px 5px rgba(215, 216, 219, 0.2), -5px 0 7px -8px hsl(225, 5%, 85%);
+    padding: 2.5rem;
+    border-radius: 10px;
+}
+
+.browser-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.browser p:first-of-type{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: hsl(229, 31%, 21%);
+}
+
+.browser button{
+    width: 90%;
+    height: 3rem;
+    margin: 1rem 0;
+    background: hsl(231, 69%, 60%);
+    color: #fff;
+    font-family: 'Rubik', serif;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+}
+
+.browser button:hover{
+    color: hsl(231, 69%, 60%);
+    border: 2px solid hsl(231, 69%, 60%);
+    background: #fff;
+}
+
+.faqs{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 7rem;
+}
+
+.faq__container{
+    text-align: left;
+    margin: 3rem 0;
+}
+
+.faqs > p:first-child{
+    font-size: 1.5rem;
+    color:hsl(229, 31%, 21%);
+    font-weight: 500;
+    width: 70%;
+    padding: 1rem 0;
+    margin: auto;
+}
+
+.faqs > p:nth-child(2){
+    color:hsl(229, 8%, 60%);
+    width: 80%;
+    margin: auto;
+}
+
+.faq > div {
+    color:hsl(229, 31%, 21%);
+    border-bottom: 1px solid hsl(229, 8%, 60%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.faq > div p:first-of-type:hover{
+    color: hsl(0, 94%, 66%);
+}
+
+.faq > div img{
+    width: 20px;
+    height: 12px;
+}
+
+.faq > p{
+    color: hsl(229, 8%, 60%);
+    display:none;
+}
+
+.faqs button{
+    width: 8rem;
+    height: 3rem;
+    border: none;
+    border-radius: 5px;
+    background:hsl(231, 69%, 60%);
+    color: #fff;
+    font-family: 'Rubik', serif;
+    font-weight: 500;  
+}
+
+.signup-container{
+    background:hsl(231, 69%, 60%);
+}
+
+.signup{
+    color: #fff;
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.signup div{
+    display: flex;
+    flex-direction: column;
+}
+.signup p:first-of-type{
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+}
+
+.signup p:last-of-type{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup input, .signup button{
+    width: 90%;
+    height: 3rem;
+    border: none;
+    border-radius: 5px;
+    margin: 0.5rem 0;
+}
+
+.signup input{
+    color:hsl(229, 8%, 60%);
+    padding: 0 1rem;
+    font-family: 'Rubik', serif;
+}
+
+.signup input:focus{
+    outline: none;
+}
+.signup button{
+    background: hsl(0, 94%, 66%);
+    color: #fff;
+    font-family: 'Rubik', serif;
+    font-weight: 500;
+    justify-self: flex-start;
+}
+
+.signup button:hover,
+.signup button:active{
+    color:hsl(0, 94%, 66%);
+    outline: 2px solid hsl(0, 94%, 66%);
+    background: #fff;
+}
+
+footer{
+    text-align: center;
+    padding: 4rem 0;
+    background: hsl(229, 31%, 21%);
+}
+
+footer div{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer ul{
+    list-style: none;
+    text-transform: uppercase;
+    padding: 0;
+    color: #fff;
+}
+
+footer ul li{
+    padding: 1rem 0;
+}
+
+footer ul li:hover{
+    color:hsl(0, 94%, 66%);
+}
+
+
+.socials{
+    display: flex;
+    flex-direction: row;
+}
+
+footer i{
+    color: #fff;
+    padding: 0 1rem;
+}
+
+footer i:hover{
+    color: hsl(0, 94%, 66%);
+}
+
+footer .attribution{
+    color: #fff;
+    width: 90%;
+    margin: auto;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+footer .attribution a{
+    color: hsl(0, 94%, 66%);
+    text-decoration: none;
+}
+
+
+
+@media (min-width: 50rem){
+    .nav-mobile{
+        display: none;
+    }
+
+    .nav-items{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-items li{
+        padding: 0 1rem;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        color:hsl(229, 8%, 60%);
+        display: flex;
+        align-items: center;
+        letter-spacing: 2px;
+    }
+
+    .nav-items li:hover,
+    .nav-items li:active{
+        color:hsl(0, 94%, 66%);
+    }
+
+    .nav-items li:last-of-type{
+        background: hsl(0, 94%, 66%);
+        color: white;
+        padding: 0.7rem 2rem;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .nav-items li:last-of-type:hover,
+    .nav-items li:last-of-type:active{
+        color: hsl(0, 94%, 66%);
+        background: white;
+        outline: 2px solid hsl(0, 94%, 66%);
+        border-radius: 5px;
+    }
+
+    .intro{
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+
+    .intro__illustration{
+        width: 50vw;
+        max-width: 620px;
+        margin-right: 5rem;
+    }
+
+    .intro__text{
+        width: 55vw;
+        padding: 0 0 0 7rem;
+        margin: 0;
+        text-align: left;
+        align-self: flex-start;
+    }
+
+    .intro__text button{
+        margin-left: 0;
+    }
+
+    .intro__text button:first-of-type:hover,
+    .intro__text button:first-of-type:active{
+        color: hsl(231, 69%, 60%);
+        border: 2px solid hsl(231, 69%, 60%);
+        background: #fff;
+    }
+
+    .intro__text button:nth-of-type(2):hover,
+    .intro__text button:nth-of-type(2):active{
+        color:hsl(229, 31%, 21%);
+        border: 2px solid hsl(229, 31%, 21%);
+        background: #fff;
+    }
+
+    .intro__text p:first-of-type{
+        font-size: 2.5rem;
+        width: 60%;
+    }
+
+    .intro__text p:last-of-type{
+        padding: 0;
+        width: 60%;
+        white-space: pre-line;
+    }
+
+    .background-pill{
+        height: 50vh;
+        border-radius: 70px 0 0 70px;
+    }
+
+    .features-header > p:last-of-type{
+        width: 60%;
+        margin: auto;
+    }
+
+    .slider{
+        /* width: 80vw;*/
+        margin: auto; 
+    }
+    .carousel-box{
+        border-bottom: 1px solid hsl(225, 5%, 85%);
+        width: 70%;
+        margin: 3rem auto;
+    }
+
+    .carousel-controller{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-top: none;
+        width: 90%;
+        margin: auto;
+        /* margin-bottom: 0; */
+    }
+
+    .carousel-controller p{
+        padding-bottom: 1rem;
+        padding: 0 1rem 1rem 1rem;
+        margin: 0;
+        border-bottom: none;
+    }
+
+    .carousel-controller p:hover{
+        color:hsl(0, 94%, 66%);
+    }
+
+    .carousel__one,
+    .carousel__two,
+    .carousel__three{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .illustration-container{
+        width: 34vw;
+        max-width: 550px;
+        transform: translate(5rem);
+    }
+    .carousel__one div:nth-of-type(2),
+    .carousel__two div:nth-of-type(2),
+    .carousel__three div:nth-of-type(2){
+        margin: 0;
+        width: 60vw;
+    }
+
+    .carousel-text{
+        width: 70%;
+        margin: auto;
+        padding: 0 2rem;
+        align-self: flex-start;
+        text-align: left;
+    }
+
+    .carousel button{
+        display: block;
+        width: 8rem;
+        height: 3rem;
+        border: none;
+        border-radius: 5px;
+        background:hsl(231, 69%, 60%);
+        color: #fff;
+        font-family: 'Rubik', serif;
+        font-weight: 500;   
+    }
+
+    .background-pill-2{
+        width: 35vw;
+        height: 35vh;
+        border-radius: 0 300px 300px 0;
+    }
+
+    .download-options p:last-of-type{
+        width: 50%;
+        margin: auto;
+    }
+
+    .browser-box{
+        flex-direction: row;
+        height: 70vh;
+        padding: 0;
+    }
+
+    .browser{
+        padding: 0.5rem 0 0 0;
+        width: 30%;
+        height: 75%;
+    }
+
+    .browser button{
+        width: 80%;
+    }
+
+    .chrome-image div:first-of-type,
+    .firefox-image div:first-of-type,
+    .opera-image div:first-of-type{
+        padding: 2rem 0;
+    }
+
+    .chrome{
+        align-self:flex-start;
+
+    }
+
+    .firefox{
+        align-self: center;
+    }
+
+    .opera{
+        align-self: flex-end;   
+    }
+
+    .faqs{
+        width: 40%;
+        margin: 5rem auto;
+    }
+
+    .signup{
+        width: 60%;
+        margin: auto;
+    }
+
+    .signup p:nth-of-type(2){
+        width: 40%;
+        margin: auto;
+        padding: 1rem 0;
+    }
+
+    form{
+        flex-direction: row;
+    }
+
+    .signup div{
+        margin: 0 0.5rem;
+    }
+
+    .signup input{
+        display: inline-block;
+        width: 100%;
+        height: 2.5rem;
+    }
+
+    .signup button{
+        display: inline-block;
+        width: 15%;
+        height: 2.5rem;
+        margin: 0 0.5rem
+    }
+
+    footer{
+        padding: 1rem 0;
+    }
+
+    footer div{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer__nav{
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.8rem;
+    }
+
+    .footer__nav li{
+        padding: 0 0.5rem;
+    }
+
+    .socials{
+        justify-content: flex-end;
+    }
+}
