@@ -48,18 +48,39 @@ Form.addEventListener('submit', (e)=>{
     e.preventDefault();
     if(inputField.value === ''){
         messages.insertAdjacentHTML('beforeend', `<small> Email field can't be left empty </small>`);
-        setTimeout(()=> messages.parentElement.removeChild(messages) , 2000)
+        inputField.style.margin = '0';
+        inputField.style.border = '2px solid hsl(0, 94%, 66%)';
+        messages.classList.add('signup-error');
+        setTimeout(()=> {
+            messages.parentElement.removeChild(messages);
+            inputField.style.border = 'none';
+            inputField.value = '';
+        } , 2000);
     }
 
     else{
         const email = inputField.value;
         if(email.includes('@') && email.includes('.com')){
             messages.insertAdjacentHTML('beforeend', `<small class="success"> submission successful </small>`)
-            setTimeout(()=> messages.parentElement.removeChild(messages) , 2000)
+            inputField.style.margin = '0';
+            inputField.style.border = '2px solid hsl(134, 57%, 54%)';
+            messages.classList.add('signup-success');
+            setTimeout(()=> {
+                messages.parentElement.removeChild(messages);
+                inputField.style.border = 'none';
+                inputField.value = '';
+            } , 2000)
         }
         else{
             messages.insertAdjacentHTML('beforeend', `<small> Please input a valid email address</small>`);
-            setTimeout(()=> messages.parentElement.removeChild(messages) , 2000)
+            inputField.style.margin = '0';
+            inputField.style.border = '2px solid hsl(0, 94%, 66%)';
+            messages.classList.add('signup-error');
+            setTimeout(()=> {
+                messages.parentElement.removeChild(messages);
+                inputField.style.border = 'none';
+                inputField.value = '';
+            } , 2000)
         }
        
         }

@@ -210,7 +210,7 @@ nav{
     justify-content: center;
     align-items: center;
     width: 300%;
-    transition: all .3s;
+    transition: all 0.7s ease-in-out;
 }
 
 .illustration-container{
@@ -448,8 +448,28 @@ form{
 .signup button:hover,
 .signup button:active{
     color:hsl(0, 94%, 66%);
-    outline: 2px solid hsl(0, 94%, 66%);
+    border: 2px solid hsl(0, 94%, 66%);
     background: #fff;
+}
+
+.signup button:focus{
+    outline: none;
+}
+
+.signup-error{
+    background: hsl(0, 94%, 66%);
+    color: white;
+    padding: 0.5rem;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.signup-success{
+    background: hsl(134, 57%, 54%);
+    color: white;
+    padding: 0.5rem;
+    width: 100%;
+    vertical-align: middle;
 }
 
 footer{
@@ -751,7 +771,7 @@ footer .attribution a{
         flex-direction: row;
     }
 
-    .signup div{
+    .input-container{
         margin: 0 0.5rem;
     }
 
