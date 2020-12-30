@@ -51,11 +51,11 @@ Form.addEventListener('submit', (e)=>{
         inputField.style.margin = '0';
         inputField.style.border = '2px solid hsl(0, 94%, 66%)';
         messages.classList.add('signup-error');
-        setTimeout(()=> {
-            messages.parentElement.removeChild(messages);
-            inputField.style.border = 'none';
-            inputField.value = '';
-        } , 2000);
+        // setTimeout(()=> {
+        //     messages.parentElement.removeChild(messages);
+        //     inputField.style.border = 'none';
+        //     inputField.value = '';
+        // } , 2000);
     }
 
     else{
